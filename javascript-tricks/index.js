@@ -1,5 +1,7 @@
 //https://github.com/seanmodd/jsUdemy
 
+const { number } = require('prop-types');
+
 /* 
 🗓 SECTION 2 --- WORKING WITH OBJECTS
 */
@@ -447,28 +449,178 @@ console.log(findLast(arr1, (el) => el > 5));
 */
 
 /* 26.)📌 Debounce Function */
+//Chrome needed
+//onResize is a function expression, created as an arrow function and it is a callback function expression for const e and when it runs it's going to log two things. 1- the inner height  with innerHeight and the inner width innerWidth
+
+/*
+MUST REWATCH UGH
+*/
 
 /* 27.)📌 'Once' Function */
 
+//Chrome Needed... screenshot is here https://cln.sh/4MaUzU
+
+/*
+
+>>>> var button = document.querySelector('button');
+undefined
+
+> var once = fn => {
+    let called = false;
+    return function() {
+        if(!called) {
+         called = true;
+        return fn();
+        }
+    }
+}
+
+var onClick = () => console.log('clicked!!!!');
+
+var button = document.querySelector('button');
+
+button.addEventListener('click', once(onClick));
+> undefined
+> VM721:12 clicked!!!!
+
+
+
+*/
+
 /* 28.)📌 Measure Time For Function to Run */
+//Chrome Needed... screenshot is here https://cln.sh/sQYUej
+/*
+
+//Measure time it takes function to run
+
+var getUserData = async (user) => await fetch(`https://api.github.com/users/${user}`);
+var time = (fn, ...args) => {
+ console.time('time');
+ let result = fn(...args);
+ console.timeEnd('time');
+ return result;
+};
+
+time(() => getUserData('wesbos'));
+VM681:7 time: 0.401123046875 ms
+Promise {<pending>}
+VM681:3 Fetch finished loading: GET "https://api.github.com/users/wesbos".
+
+
+
+*/
 
 /* 
 🗓 SECTION 5 --- WORKING WITH STRINGS
 */
 
 /* 29.)📌 Check if String Contains Substring */
+var URL = 'https://api/github.com/users/reedbarger';
+var containsWord = URL.includes('user');
+console.log(containsWord);
+
+var URL = 'https://api/github.com/users/reedbarger';
+var containsWord = URL.indexOf('user');
+console.log(containsWord);
+
+var URL = 'https://api/github.com/users/reedbarger';
+var containsWord = URL.startsWith('github');
+console.log(containsWord);
+
+var URL = 'https://api/github.com/users/reedbarger';
+var containsWord = URL.endsWith('reedbarger');
+console.log(containsWord);
 
 /* 30.)📌 Iterate Over a String */
 
+var str = 'hello world';
+//first approach
+for (let i = 0; i < str.length; i++) {
+  console.log(str.charAt(i));
+}
+//if we want to output an index we do the following:
+for (let i = 0; i < str.length; i++) {
+  console.log(str.charAt(i), i);
+}
+
+//second approach is for in loop
+for (let s in str) {
+  console.log(str.charAt(s));
+}
+//third approach is for of loop, an ES6 feature!
+for (let s of str) {
+  console.log(s);
+}
+//if we want to output an index we do the following (one more step):
+//this includes DESTRUCTURING!
+var newStr = str.split('');
+
+newStr;
+for (let [i, n] of newStr.entries()) {
+  console.log(n, i);
+}
+
 /* 31.)📌 Capitalize First Word of String */
+var str = 'hello world';
+
+//first approach
+function capitalize(str) {
+  return str[0].toUpperCase() + str.slice(1);
+}
+var result = capitalize(str);
+console.log(result);
+
+//second approach
+function newCapitalize(str) {
+  return `${str[0].toUpperCase()}${str.slice(1)}`;
+}
+var result = newCapitalize(str);
+console.log(result);
+
+//third approach
+var capitalize = ([first, ...rest]) => {
+  console.log(first, rest);
+};
+
+var result = capitalize('hello world');
+
+var capitalize = ([first, ...rest]) => {
+  return first.toUpperCase() + rest.join('');
+};
+
+var result = capitalize('hello world');
+console.log(result);
 
 /* 32.)📌 Capitalize Every Word in String */
+
+function capitalizeWords(str) {
+  return str
+    .split('')
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join('');
+}
+var result = capitalizeWords('hello world');
+
+console.log(result);
 
 /* 
 🗓 SECTION 6 --- WORKING WITH NUMBERS OR MATH OPERATIONS
 */
 
 /* 33.)📌 Change Length of Decimals */
+
+var dec = 1.23445644334556645;
+console.log(dec);
+
+var newDec = dec.toFixed(2);
+console.log(dec);
+console.log(newDec);
+
+var newDec = dec.toPrecision(2);
+console.log(dec);
+console.log(newDec);
+
+//convert them to numbers!
 
 /* 34.)📌 Fixing Math Errors with Decimals */
 
@@ -483,17 +635,121 @@ console.log(findLast(arr1, (el) => el > 5));
 */
 
 /* 38.)📌 Shortcircuiting with Logical 'And' */
+var loggedIn = true;
+
+if (loggedIn) {
+  var i = 'he is logged in baby';
+}
+
+var cc = console.log(i);
+
+//second approach
+loggedIn && cc;
+//doesn't work, the right side is supposed to run...
 
 /* 39.)📌 Use Function Declarations for Greater Flexibility */
 
+//hoisting allows you to assign variables before they've even been created yet!
+
+age = 30;
+var age;
+console.log(age);
+
+//you can't do this with var if you call a function BEFORE the function expression is made! UNLESS YOU run a function declaration which includes the word function!!!
+
 /* 40.)📌 Use Ternary Operator */
 
+var loggedIn = true;
+var user = 'John';
+
+if (loggedIn) {
+  console.log(user + ' is logged in');
+} else {
+  console.log('no user :(');
+}
+//first approach
+var loggedIn = true;
+var user = 'Sam';
+var tern = loggedIn ? user + ' is logged in' : 'no user';
+
+console.log(tern);
+
+//ternary expressions are just shorter if else statements
+
+var loggedIn = false;
+var user = 'Sam';
+var tern = loggedIn ? user + ' is logged in' : 'no user';
+
+console.log(tern);
+
 /* 41.)📌 Use 'break' and 'continue' with For Loops */
+
+var users = [
+  { name: 'Don', country: 'England' },
+  { name: 'Vladimir', country: 'Russia' },
+  { name: 'Maria', country: 'Spain' },
+];
+
+for (let user of users) {
+  console.log(user);
+}
+
+var russianUser;
+
+for (let user of users) {
+  console.log(user);
+  if (user.country === 'Russia') {
+    russianUser = user;
+    break;
+  }
+}
+console.log(russianUser);
+
+//using the continue keyword
+
+var newUsers = [];
+for (let user of users) {
+  console.log(user);
+  if (user.name === 'Vladimir') continue;
+  console.log(user);
+  newUsers.push(user);
+}
+console.log(newUsers);
 
 /* 
 🗓 SECTION 8 --- ES6 TRICKS
 */
 
 /* 42.)📌 Private Data Using IIFEs or Block Scope */
+
+function getUserData() {
+  var name = "John";
+  var email = "john@gmail.com";
+  var password = "alsdfjaskdf";
+
+  return {
+    name: name,
+    email: email
+  }
+}
+getUserData()
+getUserData().email
+
+//second approach you wrap the function in parantheses then immediately call it
+function getUserData() {
+  let name = "John";
+  let email = "john@gmail.com";
+  let password = "alsdfjaskdf";
+
+  return {
+    name: name,
+    email: email
+  }
+}
+getUserData()
+getUserData().email
+
+
+
 
 /* 43.)📌 Array Destructuring to Swap Variables */
