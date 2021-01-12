@@ -723,33 +723,38 @@ console.log(newUsers);
 /* 42.)📌 Private Data Using IIFEs or Block Scope */
 
 function getUserData() {
-  var name = "John";
-  var email = "john@gmail.com";
-  var password = "alsdfjaskdf";
+  var name = 'John';
+  var email = 'john@gmail.com';
+  var password = 'alsdfjaskdf';
 
   return {
     name: name,
-    email: email
-  }
+    email: email,
+  };
 }
-getUserData()
-getUserData().email
+getUserData();
+getUserData().email;
 
 //second approach you wrap the function in parantheses then immediately call it
 function getUserData() {
-  let name = "John";
-  let email = "john@gmail.com";
-  let password = "alsdfjaskdf";
+  let name = 'John';
+  let email = 'john@gmail.com';
+  let password = 'alsdfjaskdf';
 
   return {
     name: name,
-    email: email
-  }
+    email: email,
+  };
 }
-getUserData()
-getUserData().email
-
-
-
+getUserData();
+getUserData().email;
 
 /* 43.)📌 Array Destructuring to Swap Variables */
+var name = 'doug@gmail.com';
+var email = 'doug';
+
+//First construct an array from which to destructure
+//Then rename the values!
+var [email, name] = [name, email];
+console.log(email);
+console.log(name);
