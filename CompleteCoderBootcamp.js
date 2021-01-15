@@ -1,3 +1,42 @@
+// 📌 Coding Exercise 29 📌
+/*
+Our First Object Exercise
+It's time to practice creating your own object literal.  Please define a new variable called product.  It should be an object literal with the following properties:
+
+name - set to the string "Gummy Bears"
+
+inStock - set to the boolean true
+
+price  - set to the number 1.99
+*/
+const product = {
+  name: 'Gummy Bears',
+  inStock: true,
+  price: 1.99,
+  flavors: ['grape', 'apple', 'cherry']
+};
+
+
+// 📌 Coding Exercise 30 📌
+/*
+Object Access Exercise
+In index.js, you'll find a restaurant object that contains a name, address, city, state, and zipcode. 
+
+Your task to is to create a variable named fullAddress that points to a string using the information from restaurant. 
+
+fullAddress should point to a string that includes the address, city, state, and zipcode from the restaurant object.
+
+To make it harder to "cheat" by copy and pasting, I've randomly generated the address portion.    For example, if address was "64 Johnson Ave", the fullAddress variable would look like this:
+
+fullAddress //"64 Johnson Ave, Brooklyn, NY 11206"
+*/
+
+
+
+
+
+
+
 // 📌 Coding Exercise 37 📌
 //https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031222#questions
 // 📌 Coding Exercise 38 📌
@@ -235,4 +274,4 @@ function cleanNames(arr) {
 const greet = (name) => {
   return `Hey ${name}`;
 };
-console.log(greet('Jason'))
+console.log(greet('Jason'));
