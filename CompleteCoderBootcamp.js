@@ -182,7 +182,57 @@ sq.perimeter(5);
 
 // 📌 Coding Exercise 46 📌
 /*
+Egg Laying Exercise
+Define an object called hen.  It should have three properties:
+
+name should be set to 'Helen'
+
+eggCount should be set to 0
+
+layAnEgg should be a method which increments the value of eggCount by 1 and returns the string "EGG".  You'll need to use this.
+
+hen.name // "Helen"
+hen.eggCount // 0
+hen.layAnEgg() // "EGG"
+hen.layAnEgg() // "EGG"
+hen.eggCount // 2
+*/
+const hen = {
+  name: 'Helen',
+  eggCount: 0,
+  layAnEgg() {
+    this.eggCount++;
+    return 'EGG';
+  },
+};
+
+console.log(hen.layAnEgg());
+
+// 📌 Coding Exercise 47 📌
+/*
+Map Practice
+It's time to get practice with the map method! Define a function called cleanNames.  It should accept an array of strings, which may contain additional space characters at the beginning and end. The cleanNames function should use the array map method to return a new array, full of trimmed names.  For example:
+
+cleanNames([" timothee", "   darth_hater", "sassyfrassy   ", " elton john   "]);
+// => ["timothee", "darth_hater", "sassyfrassy", "elton john"]
+
+
+Hint: use a string method to TRIM each string.
+*/
+function cleanNames(arr) {
+  const newArrTrim = arr.map(function (arrTrim) {
+    return arrTrim.trim();
+  });
+  return newArrTrim;
+}
+
+// 📌 Coding Exercise 48 📌
+/*
 
 
 
 */
+const greet = (name) => {
+  return `Hey ${name}`;
+};
+console.log(greet('Jason'))
