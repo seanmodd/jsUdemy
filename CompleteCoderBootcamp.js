@@ -13,14 +13,14 @@ const product = {
   name: 'Gummy Bears',
   inStock: true,
   price: 1.99,
-  flavors: ['grape', 'apple', 'cherry']
+  flavors: ['grape', 'apple', 'cherry'],
 };
 
-
+console.log(product);
 // 📌 Coding Exercise 30 📌
 /*
 Object Access Exercise
-In index.js, you'll find a restaurant object that contains a name, address, city, state, and zipcode. 
+In index.js (below) you'll find a restaurant object that contains a name, address, city, state, and zipcode. 
 
 Your task to is to create a variable named fullAddress that points to a string using the information from restaurant. 
 
@@ -30,30 +30,135 @@ To make it harder to "cheat" by copy and pasting, I've randomly generated the ad
 
 fullAddress //"64 Johnson Ave, Brooklyn, NY 11206"
 */
+const restaurant = {
+  name: 'Ichiran Ramen',
+  address: `${Math.floor(Math.random() * 100) + 1} Johnson Ave`,
+  city: 'Brooklyn',
+  state: 'NY',
+  zipcode: '11206',
+};
+const fullAddress = `${restaurant.address}, ${restaurant.city}, ${restaurant.state}, ${restaurant.zipcode}`;
+console.log(fullAddress);
 
-
-
-
-
-
-
-// 📌 Coding Exercise 37 📌
-//https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031222#questions
-// 📌 Coding Exercise 38 📌
+// 📌 Coding Exercise 31 📌
 /*
+Our First For Loop Practice
+Please use a for loop to print out the classic chorus lyrics of "I'm Blue" by Eiffel 65.  Use a for loop to print out the string "Da ba dee da ba daa" exactly 6 times.  No more, and no less.
+*/
+
+for (let i = 1; i <= 6; i++) {
+  console.log('Da ba dee da ba daa');
+}
+
+// 📌 Coding Exercise 32 📌
+/*
+More For Loops Practice
+Let's try writing a for loop that counts down, rather than up. Please write a for loop that prints the following numbers (in this order):
+
+25
+20
+15
+10
+5
+0
+*/
+for (let i = 25; i >= 0; i -= 5) {
+  console.log(i);
+}
+
+// 📌 Coding Exercise 33 📌
+/*
+Iterating Arrays Exercise
+I've provided you with an array of strings called people. Loop over the people array with a for loop, printing out each name in uppercase letters.  Your result should look something like:
+
+SCOOBY
+VELMA
+DAPHNE
+SHAGGY
+FRED
+Hint: use i from your loop as an array index!
+*/
+const people = ['Scooby', 'Velma', 'Daphne', 'Shaggy', 'Fred']; //DONT TOUCH THIS LINE!
+
+// WRITE YOUR LOOP BELOW THIS LINE:
+for (let i = 0; i < people.length; i++) {
+  console.log(people[i].toUpperCase());
+}
+
+  // 📌 Coding Exercise 34 📌
+  /*
+For...Of Practice
+Let's practice using for...of. I've provided you with an array called numbers.  Please use a for...of loop to loop over it, and print out the square of each value (the number multiplied by itself).
+
+NOTES:
+
+1. Udemy's coding exercise platform does NOT support the ** operator.
+2. You could accomplish this by using a while loop or a for loop, but please use a for...of loop! Unfortunately, I can't enforce the type of loop you use, but please I'm begging you to use a for...of.  I will hunt you down if you don't.  Thank you and have a great day!
+
+Your output should look like this:
+
+1
+4
+9
+16
+25
+36
+49
+64
+81
+*/
+
+  // 📌 Coding Exercise 35 📌
+  /*
+Heart Function Exercise
+It's time to write our first function!
+
+Define a function called printHeart that prints out the string "<3"
+
+Execute your function once
+
+// Write your function here:
+function printHeart() {
+    console.log("<3")
+}
+
+printHeart()
+*/
+
+  // 📌 Coding Exercise 36 📌
+  /*
+Rant Exercise
+Define a function called rant which accepts a string argument called message.  The function should print out an uppercased version of message 3 times (with 3 separate calls to console.log).  For example, rant("I hate beets") should print out:
+
+I HATE BEETS
+I HATE BEETS
+I HATE BEETS
+
+
+//write your function below: 
+
+function rant(message) {
+    console.log(message.toUpperCase()),
+    console.log(message.toUpperCase()),
+    console.log(message.toUpperCase()) }
+    
+rant("I hate beets")
+
+*/
+
+  // 📌 Coding Exercise 37 📌
+  //https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031222#questions
+  // 📌 Coding Exercise 38 📌
+  /*
 Return Value Practice
 It's time to practice returning values from a function! Write a simple function 'multiply' which accepts two numerical arguments and returns their product (multiply them together). Make sure to return the value instead of printing it!
 i.e. multiply(2,3) //6
 i.e. multiply(9,9) //81
 i.e. multiply(5,4) //20
 */
-function multiply(num1, num2) {
-  return num1 * num2;
-}
-multiply(2, 3);
 
-// 📌 Coding Exercise 39 📌
-/*
+  // 📌 Coding Exercise 39 📌
+  /*
 isShortsWeather Function
 I often struggle to know whether I should wear shorts or pants on a given day. Please help me decide by writing me a function called isShortsWeather. 
 
@@ -67,16 +172,14 @@ isShortsWeather(48) //false
 isShortsWeather(75) //true
 */
 
-function isShortsWeather(temp) {
-  if (temp >= 75) {
-    return true;
+  function isShortsWeather(temp) {
+    if (temp >= 75) {
+      return true;
+    }
+    {
+      return false;
+    }
   }
-  {
-    return false;
-  }
-}
-
-isShortsWeather(60);
 
 // 📌 Coding Exercise 40 📌
 /*
