@@ -1,3 +1,80 @@
+// 📌 Coding Exercise 21 📌
+/*
+Our First Conditional Exercise
+Let's get some practice with conditional statements!  In order to make your code repeatable and testable, I'm asking you to write your code inside a pre-defined function (something we have not yet covered in the course).   
+
+Write your code between the two comments in index.js
+
+You will automatically have access to a variable called num.  Please do not try and define num or change num in any way! I will be setting the value of num when I test your code, so that I can test different outcomes
+
+If num is an even number, print out "even".  Don't do anything if num is an odd number.
+*/
+function isEven(num){
+  //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓ 
+ if (num % 2 == 0) {
+   console.log("even")
+ }
+  //AND THIS LINE ↑↑↑↑↑
+}
+
+// 📌 Coding Exercise 22 📌
+/*
+getColor Conditional Exercise
+Let's get some practice with conditional statements!  In order to make your code repeatable and testable, I'm asking you to write your code inside a pre-defined function (something we have not yet covered in the course).   
+
+Write your code between the two comments in index.js
+
+You will automatically have access to a variable called phrase.  Please do not try and define phrase or change phrase in any way! I will be setting the value of phrase when I test your code.
+
+Your job is to print out a color based upon the following rules:
+
+if phrase is 'stop', you should print out 'red'
+if phrase is 'slow', you should print out 'yellow'
+if phrase is 'go', you should print out 'green'
+if phrase is anything else, you should print out 'purple'
+*/
+function getColor(phrase){
+  //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓ 
+ if (phrase = "stop") {
+   console.log("red")
+ } else if (phrase = "stop") {
+  console.log("red")
+}
+ 
+  //AND THIS LINE ↑↑↑↑↑
+}
+// 📌 Coding Exercise 23 📌
+/*
+
+*/
+
+
+// 📌 Coding Exercise 24 📌
+/*
+
+*/
+
+
+// 📌 Coding Exercise 25 📌
+/*
+
+*/
+
+// 📌 Coding Exercise 26 📌
+/*
+
+*/
+
+// 📌 Coding Exercise 27 📌
+/*
+
+*/
+
+// 📌 Coding Exercise 28 📌
+/*
+
+*/
+
 // 📌 Coding Exercise 29 📌
 /*
 Our First Object Exercise
@@ -107,6 +184,18 @@ Your output should look like this:
 64
 81
 */
+for (let i = 1; i <= 10; i++) {
+  console.log(`i is: ${i}`)
+  for ( let j = 1; j<= 3; j++) {
+    console.log(`j is: ${j}`)
+
+  }
+}
+
+
+
+
+
 
   // 📌 Coding Exercise 35 📌
   /*
