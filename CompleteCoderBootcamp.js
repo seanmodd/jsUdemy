@@ -592,3 +592,20 @@ function allEvens(evenArr) {
   return evenArr.every((num) => num % 2 == 0);
 }
 console.log(allEvens([2, 4, 6, 8]));
+
+/* 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 */
+
+/* 🗓 SECTION 24: INTRODUCING THE WORLD OF THE DOM 🗓 */
+
+/* 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 */
+
+// 📌 Coding Exercise 51 📌
+/*
+
+*/
+
+/* 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 */
+
+/* 🗓 SECTION 25: THE DOM REVISITED 🗓 */
+
+/* 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 */
