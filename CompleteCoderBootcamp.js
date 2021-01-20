@@ -9,11 +9,11 @@ You will automatically have access to a variable called num.  Please do not try 
 
 If num is an even number, print out "even".  Don't do anything if num is an odd number.
 */
-function isEven(num){
-  //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓ 
- if (num % 2 == 0) {
-   console.log("even")
- }
+function isEven(num) {
+  //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓
+  if (num % 2 == 0) {
+    console.log('even');
+  }
   //AND THIS LINE ↑↑↑↑↑
 }
 
@@ -33,47 +33,119 @@ if phrase is 'slow', you should print out 'yellow'
 if phrase is 'go', you should print out 'green'
 if phrase is anything else, you should print out 'purple'
 */
-function getColor(phrase){
-  //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓ 
- if (phrase = "stop") {
-   console.log("red")
- } else if (phrase = "stop") {
-  console.log("red")
-}
- 
+function getColor(phrase) {
+  //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓
+  if (phrase === 'stop') {
+    console.log('red');
+  } else if (phrase === 'slow') {
+    console.log('yellow');
+  } else if (phrase === 'go') {
+    console.log('green');
+  } else {
+    console.log('purple');
+  }
   //AND THIS LINE ↑↑↑↑↑
 }
+let phrase = 'go';
+getColor(phrase);
 // 📌 Coding Exercise 23 📌
 /*
-
+Nested Conditionals Practice
+Time for something a little bit different. I've given you a nested conditional that uses a variable called num.  I would like for you to change the value of num to another number, so that "YOU GOT ME!" is printed out. Don't change anything other than the value of num!  Leave the conditional alone!
 */
+// Change the value of num, so that "YOU GOT ME!" prints out
+const num = 102; // THIS IS THE ONLY LINE YOU SHOULD CHANGE :)
 
-
+// DO NOT TOUCH ANYTHING BELOW (please)
+if (num <= 100) {
+  if (num >= 50) {
+    console.log('HEY!');
+  }
+} else {
+  if (num < 103) {
+    if (num % 2 === 0) {
+      console.log('YOU GOT ME!');
+    }
+  }
+}
 // 📌 Coding Exercise 24 📌
 /*
-
+Logical AND Mystery Exercise
+I've provided you with a conditional statement that uses a variable called mystery  Please change the value of mystery so that the conditional is true and "YOU GOT IT" is printed to the console.  Do not change anything other than the value of mystery on line 1!
 */
+const mystery = 'Poooooo7'; //CHANGE THIS VALUE TO MAKE THE CONDITIONAL BELOW TRUE
 
+// LEAVE THIS CODE ALONE! (pretty please)
+if (mystery[0] === 'P' && mystery.length > 5 && mystery.indexOf('7') !== -1) {
+  console.log('YOU GOT IT!!!');
+}
 
 // 📌 Coding Exercise 25 📌
 /*
-
+Lotto Numbers Exercise
+Let's get some practice creating arrays. Please define a variable called lottoNumbers and set it equal to an array containing any 6 numbers.  It's simple, but we've got to start somewhere!
 */
+const lottoNumbers = [1, 2, 3, 4, 5, 6];
 
 // 📌 Coding Exercise 26 📌
 /*
+Array Access Exercise
+I've provided you with a leaderboard array, which consists of 4 strings.  Without touching line 1, please make the following changes:
 
+Unfortunately, I misspelled the 2nd name in the leaderboard array.  I meant to write "Luna" instead of "Lua".  Please update it to "Luna" (without changing line 1)
+
+Bellatrix has fallen off the leaderboard and has been replaced by Draco! Please update the last element of the array so that it holds "Draco" instead of "Bellatrix" (once again, please do this without changing line 1)
 */
+const leaderboard = ['Harry', 'Lua', 'Hermione', 'Bellatrix']; //DON'T TOUCH THIS LINE!
+
+// YOUR CODE BELOW HERE:
+leaderboard[1] = 'Luna';
+leaderboard[3] = 'Draco';
+console.log(leaderboard);
 
 // 📌 Coding Exercise 27 📌
 /*
+Push/Pop/Shift/Unshift Practice
+I've provided you with an array called planets. Unfortunately, I'm an idiot who doesn't know much about our solar system and I made some mistakes.  Please help me fix the planets array!  Using the array methods we just learned...
 
+Remove the first element, "The Moon", from the planets array.  The moon is not a planet!
+
+Add in "Saturn" at the very end of the planets array
+
+Add "Mercury" as the first element in the planets array.
+
+At the end of your hard work, planets should look like this: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn"]
+
+(This one is super easy to cheat on.  Please use the array methods we just covered, rather than simply changing the values in planets directly)
 */
+const planets = ['The Moon', 'Venus', 'Earth', 'Mars', 'Jupiter']; //DO NOT TOUCH THIS LINE!
+
+// YOUR CODE GOES BELOW THIS LINE:
+
+planets.shift();
+planets.push('Saturn');
+planets.unshift('Mercury');
+
+console.log(planets);
 
 // 📌 Coding Exercise 28 📌
 /*
-
+Nested Arrays Exercise
+I've provided you with an array called airplaneSeats, which represents the rows of seats on a flight.  Our friend Hugo is looking to book a seat on our flight. Fortunately, there is one middle seat available (it's set to null currently).  Please update the array element that is currently null, to instead be "Hugo". (Please don't directly change the code on line 6 where I'm initially setting it to null.  This is an exercise in accessing data in nested arrays!)
 */
+// DO NOT TOUCH!!! (please)
+const airplaneSeats = [
+  ['Ruth', 'Anthony', 'Stevie'],
+  ['Amelia', 'Pedro', 'Maya'],
+  ['Xavier', 'Ananya', 'Luis'],
+  ['Luke', null, 'Deniz'],
+  ['Rin', 'Sakura', 'Francisco'],
+];
+
+// YOUR CODE GOES BELOW THIS LINE:
+
+airplaneSeats[3][1] = 'Hugo';
+console.log(airplaneSeats);
 
 // 📌 Coding Exercise 29 📌
 /*
@@ -162,8 +234,8 @@ for (let i = 0; i < people.length; i++) {
   console.log(people[i].toUpperCase());
 }
 
-  // 📌 Coding Exercise 34 📌
-  /*
+// 📌 Coding Exercise 34 📌
+/*
 For...Of Practice
 Let's practice using for...of. I've provided you with an array called numbers.  Please use a for...of loop to loop over it, and print out the square of each value (the number multiplied by itself).
 
@@ -184,38 +256,30 @@ Your output should look like this:
 64
 81
 */
-for (let i = 1; i <= 10; i++) {
-  console.log(`i is: ${i}`)
-  for ( let j = 1; j<= 3; j++) {
-    console.log(`j is: ${j}`)
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //DON'T CHANGE THIS LINE PLEASE!
 
-  }
+// WRITE YOUR LOOP BELOW THIS LINE:
+for (let i of numbers) {
+  console.log(i * i);
 }
-
-
-
-
-
-
-  // 📌 Coding Exercise 35 📌
-  /*
+// 📌 Coding Exercise 35 📌
+/*
 Heart Function Exercise
 It's time to write our first function!
 
 Define a function called printHeart that prints out the string "<3"
 
 Execute your function once
-
+*/
 // Write your function here:
 function printHeart() {
-    console.log("<3")
+  console.log('<3');
 }
 
-printHeart()
-*/
+printHeart();
 
-  // 📌 Coding Exercise 36 📌
-  /*
+// 📌 Coding Exercise 36 📌
+/*
 Rant Exercise
 Define a function called rant which accepts a string argument called message.  The function should print out an uppercased version of message 3 times (with 3 separate calls to console.log).  For example, rant("I hate beets") should print out:
 
@@ -223,22 +287,36 @@ I HATE BEETS
 I HATE BEETS
 I HATE BEETS
 
-
-//write your function below: 
+*/
+//write your function below:
 
 function rant(message) {
-    console.log(message.toUpperCase()),
-    console.log(message.toUpperCase()),
-    console.log(message.toUpperCase()) }
-    
-rant("I hate beets")
+  console.log(message.toUpperCase());
+  console.log(message.toUpperCase());
+  console.log(message.toUpperCase());
+}
+rant('I hate beets');
 
+// 📌 Coding Exercise 37 📌
+/*
+Multiple Args Exercise
+In some dice games like Craps, a roll of two 1's is called "Snake Eyes".  It's generally not a good roll.  Please write a function called isSnakeEyes, which accepts two numbers as inputs, representing two dice.  If the two numbers are both 1's, please print "Snake Eyes!" otherwise print "Not Snake Eyes!"
+
+isSnakeEyes(1,1) //Snake Eyes!
+isSnakeEyes(1,5) //Not Snake Eyes!
+isSnakeEyes(4,5) //Not Snake Eyes!
 */
+function isSnakeEyes(dice1, dice2) {
+  if (dice1 === 1 && dice2 === 1) {
+    console.log('Snake Eyes!');
+  } else {
+    console.log('Not Snake Eyes!');
+  }
+}
+isSnakeEyes(1, 1);
 
-  // 📌 Coding Exercise 37 📌
-  //https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031222#questions
-  // 📌 Coding Exercise 38 📌
-  /*
+// 📌 Coding Exercise 38 📌
+/*
 Return Value Practice
 It's time to practice returning values from a function! Write a simple function 'multiply' which accepts two numerical arguments and returns their product (multiply them together). Make sure to return the value instead of printing it!
 i.e. multiply(2,3) //6
@@ -246,8 +324,14 @@ i.e. multiply(9,9) //81
 i.e. multiply(5,4) //20
 */
 
-  // 📌 Coding Exercise 39 📌
-  /*
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+let sum = multiply(2, 3);
+console.log(sum);
+
+// 📌 Coding Exercise 39 📌
+/*
 isShortsWeather Function
 I often struggle to know whether I should wear shorts or pants on a given day. Please help me decide by writing me a function called isShortsWeather. 
 
@@ -261,14 +345,14 @@ isShortsWeather(48) //false
 isShortsWeather(75) //true
 */
 
-  function isShortsWeather(temp) {
-    if (temp >= 75) {
-      return true;
-    }
-    {
-      return false;
-    }
+function isShortsWeather(temp) {
+  if (parseInt(temp) >= parseInt(75)) {
+    return true;
+  } else {
+    return false;
   }
+}
+console.log(isShortsWeather(655));
 
 // 📌 Coding Exercise 40 📌
 /*
@@ -279,13 +363,13 @@ lastElement([3,5,7]) //7
 lastElement([1]) //1
 lastElement([]) //null
 */
-function lastElement(arr) {
-  if (!arr.length) {
+function lastElement(arrayNew) {
+  if (arrayNew.length === 0) {
     return null;
+  } else {
+    return arrayNew[arrayNew.length - 1];
   }
-  return arr[arr.length - 1];
 }
-
 // 📌 Coding Exercise 41 📌
 /*
 Capitalize Exercise
@@ -438,6 +522,7 @@ const hen = {
 };
 
 console.log(hen.layAnEgg());
+console.log(hen.eggCount);
 
 // 📌 Coding Exercise 47 📌
 /*
@@ -450,12 +535,16 @@ cleanNames([" timothee", "   darth_hater", "sassyfrassy   ", " elton john   "]);
 
 Hint: use a string method to TRIM each string.
 */
-function cleanNames(arr) {
-  const newArrTrim = arr.map(function (arrTrim) {
-    return arrTrim.trim();
+function cleanNames(arr1) {
+  const newArrTrim = arr1.map(function (newArrTrim) {
+    return newArrTrim.trim();
   });
+
   return newArrTrim;
 }
+let arr1 = ['    hey', 'new    ', 'hehe'];
+
+console.log(cleanNames(arr1));
 
 // 📌 Coding Exercise 48 📌
 /*
@@ -467,3 +556,39 @@ const greet = (name) => {
   return `Hey ${name}`;
 };
 console.log(greet('Jason'));
+
+const greett = (str) => {
+  return `Hey ${str}`;
+};
+
+let str = 'David';
+console.log(greett(str));
+
+// 📌 Coding Exercise 48 📌
+/*
+Filter Exercise
+Let's get some practice using the filter method. Write a function called validUserNames that accepts an array of usernames (strings).  It should return a new array, containing only the usernames that are less than 10 characters. For example:
+
+validUserNames(['mark', 'staceysmom1978', 'q29832128238983', 'carrie98', 'MoanaFan']);
+// => ["mark", "carrie98", "MoanaFan"]
+*/
+
+function validUserNames(arrUserNames) {
+  return arrUserNames.filter((names) => names.length < 10);
+}
+let arrUserNames = ['tim', 'shayanseanmodjtehedi'];
+
+// 📌 Coding Exercise 50 📌
+/*
+Some/Every Exercise
+Define a function called allEvens that accepts a single array of numbers.  If the array contains all even numbers, return true.  Otherwise, return false.  Use some or every to help you do this!  (only one of them is actually useful here)
+
+allEvens([2,4,6,8]) //true
+allEvens([1,4,6,8]) //false
+allEvens([1,2,3]) //false
+*/
+
+function allEvens(evenArr) {
+  return evenArr.every((num) => num % 2 == 0);
+}
+console.log(allEvens([2, 4, 6, 8]));
