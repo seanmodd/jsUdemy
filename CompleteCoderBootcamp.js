@@ -601,11 +601,54 @@ console.log(allEvens([2, 4, 6, 8]));
 
 // 📌 Coding Exercise 51 📌
 /*
+getElementById Practice
+Let's get some practice using getElementById. I've provided a little bit of markup for you (please don't change it!)  Your goal is to write code in app.js to select the following elements using getElementById:
 
+Select the image element by its id and save it to a variable called image
+
+Select the h1 by its id and save it to a variable called heading
+Answer and question is here: https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031458#notes
+*/
+
+// 📌 Coding Exercise 52 📌
+/*
+querySelector Practice
+I've provided you with some simple markup in index.html.  Your task is to use querySelector and querySelectorAll to select some of those elements.
+
+Select all elements that have the class of "done" and save them in a variable called doneTodos.
+
+Select the one checkbox and save it in a variable called checkbox. Be careful, there is more than one input element on the page! You'll need to select using the type attribute. (if you can't remember the css attribute selector...google it! That's what I would do!)
+
+Write your code in app.js.  Please do not change any of the elements in index.html
+Answer and question is here: https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031460#notes
+*/
+
+// 📌 Coding Exercise 53 📌
+/*
+Pickles Exercise
+I've provided you with some basic markup in index.html
+
+Please use JavaScript to select the <span> element that currently reads "Delicious"
+
+Change its text to read "Disgusting" USING JAVASCRIPT. Even if you are a weirdo who likes pickles, please change the text to "Disgusting". 
+
+Yes, you could cheat and just update the html file directly, but I hope you don't!  The goal here is to practice using JavaScript to manipulate HTML.
+Answer and question is here: https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031464#notes 
+*/
+
+// 📌 Coding Exercise 54 📌
+/*
+Manipulating Attributes Practice
+Let's get some practice working with DOM element attributes. I've provided you with some very basic markup.  Please select the image element and:
+
+change its source to this url: https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg
+
+change its alt text to be "chicken"
+Answer and question is here: https://www.udemy.com/course/the-web-developer-bootcamp/learn/quiz/5031840#notes
 */
 
 /* 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 */
 
-/* 🗓 SECTION 25: THE DOM REVISITED 🗓 */
+/* 🗓 SECTION 25: THE Missing Piece: DOM Events 🗓 */
 
 /* 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 🗓 */
