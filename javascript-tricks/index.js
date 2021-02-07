@@ -11,6 +11,12 @@ const { number } = require('prop-types');
 var arr = [1, 2, 3];
 console.log(arr.length);
 
+var object2 = { a: 1, b: 2 };
+var objectLength = Object.keys(object2);
+console.log(objectLength.length);
+
+//see above it turns it into an array!
+
 //Turn object into array so you can get the length of object
 var obj = { a: 1, b: 2, c: 3 };
 var llength = Object.keys(obj);
